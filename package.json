@@ -1,0 +1,31 @@
+{
+  "name": "shadmini-code",
+  "version": "0.1.0",
+  "description": "Professional Code Editor for Mobile & Web with AI Integration",
+  "author": "ShadMini",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "web:dev": "cd web && npm run dev",
+    "web:build": "cd web && npm run build",
+    "mobile:dev": "cd mobile && npm start",
+    "mobile:build": "cd mobile && eas build",
+    "server:dev": "cd backend && npm run dev",
+    "server:build": "cd backend && npm run build",
+    "install:all": "npm install && cd web && npm install && cd ../mobile && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run server:dev\" \"npm run web:dev\" \"npm run mobile:dev\"",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "concurrently": "^8.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
